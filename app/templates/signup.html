@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+<form class="bg-white p-5 rounded mt-3" action="" method="POST">
+    <h1 class="text-center">Sign Up</h1>
+
+    {{ form.csrf_token }}
+
+    {{ form.email.label }}
+    {{ form.email(class='form-control', placeholder='Enter Email') }}
+
+    {{ form.username.label }}
+    {{ form.username(class='form-control', placeholder='Enter Username') }}
+
+    {{ form.password.label }}
+    {{ form.password(class='form-control', placeholder='Enter Password')}}
+
+    {{ form.confirm_pass.label }}
+    {{ form.confirm_pass(class='form-control', placeholder='Confirm Password')}}
+
+    {{ form.submit(class='btn btn-primary w-100 mt-3') }}
+
+</form>
+{% endblock %}
